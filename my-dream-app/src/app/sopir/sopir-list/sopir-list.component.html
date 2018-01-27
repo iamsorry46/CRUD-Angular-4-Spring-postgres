@@ -1,0 +1,57 @@
+<div class="container">
+  <div class="row">
+    <div class="col">
+      <section>
+        <header class="header">
+          <div class="row">
+            <div class="col-md-4">
+              <h2>Data Sopir</h2>
+            </div>
+            <div class="col-md-6">
+
+            </div>
+            <div class="col-md-2">
+              <button type="button" class="btn btn-primary" (click)="redirectNewSopirPage()">New Sopir</button>
+            </div>
+          </div>
+
+        </header>
+      </section>
+
+      <section class="main">
+
+        <table class="table" style="font:16px arial,verdana,sans-serif; text-shadow: 1px 1px 2px khaki;">
+          <thead>
+          <tr>
+            <th>No</th>
+            <th>Nama</th>
+            <th>Alamat</th>
+            <th>Jenis Kelamin</th>
+            <th>Tanggal Lahir</th>
+            <th>No. Telephone</th>
+
+ 
+            <th></th>
+          </tr>
+          </thead>
+          <tbody>
+          <tr *ngFor="let sopir of sopirs">
+            <th scope="row">{{sopir.id}}</th>
+            <td>{{sopir.namaSopir}}</td>
+            <td>{{sopir.alamatSopir}}</td>
+            <td>{{sopir.kelaminSopir}}</td>
+            <td>{{sopir.lahirSopir}}</td>
+            <td>{{sopir.telpSopir}}</td>
+            
+            <td>
+              <button type="button" class="btn btn-success" (click)="editSopirPage(sopir)">Edit</button>
+              <button type="button" class="btn btn-danger" (click)="deleteSopir(sopir)">Delete</button>
+            </td>
+          </tr>
+          
+          </tbody>
+        </table>
+      </section>
+    </div>
+  </div>
+</div>

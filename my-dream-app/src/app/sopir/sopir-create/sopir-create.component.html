@@ -1,0 +1,51 @@
+<div class="container">
+  <div class="row">
+    <div class="col">
+      <section>
+        <form novalidate [formGroup]="sopirForm" (ngSubmit)="onSubmit()">
+          <fieldset>
+            <div class="form-group">
+              <label>Nama</label>
+              <input type="text"
+                     class="form-control"
+                     formControlName="namaSopir">
+            </div>
+
+            <div class="form-group">
+              <label>Alamat</label>
+              <input type="text"
+                     class="form-control"
+                     formControlName="alamatSopir">
+            </div>
+
+            <div class="form-group">
+              <label>Jenis Kelamin</label>
+              <input type="text"
+                     class="form-control"
+                     formControlName="kelaminSopir">
+            </div>
+
+            <div class="form-group">
+              <label>Tanggal Lahir</label>
+              <input type="text"
+                     class="form-control"
+                     formControlName="lahirSopir">
+            </div>
+
+            <div class="form-group">
+              <label>No. Telephone</label>
+              <input type="text"
+                     class="form-control"
+                     formControlName="telpSopir">
+            </div>
+          </fieldset>
+
+
+          <button type="submit" class="btn btn-primary"  [disabled]="!sopirForm.valid" >Submit</button>
+          <button type="button" class="btn btn-warning" (click)="redirectSopirPage()">Cancel</button>
+          <pre>{{sopirForm.value | json}}</pre>
+        </form>
+      </section>
+    </div>
+  </div>
+</div><br>

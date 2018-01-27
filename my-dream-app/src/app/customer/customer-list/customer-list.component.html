@@ -1,0 +1,55 @@
+<div class="container">
+  <div class="row">
+    <div class="col">
+      <section>
+        <header class="header">
+          <div class="row">
+            <div class="col-md-4">
+              <h2>Data Pelanggan</h2>
+            </div>
+            <div class="col-md-6">
+
+            </div>
+            <div class="col-md-2">
+              <button type="button" class="btn btn-primary" (click)="redirectNewCustomerPage()">New Customer</button>
+            </div>
+          </div>
+
+        </header>
+      </section>
+
+      <section class="main">
+
+        <table class="table" style="font:16px arial,verdana,sans-serif; text-shadow: 1px 1px 2px khaki;">
+          <thead>
+          <tr>
+            <th>No</th>
+            <th>Nama Customer</th>
+            <th>Alamat Customer</th>
+            <th>Jenis Kelamin</th>
+            <th>No. Telephone</th>
+
+ 
+            <th></th>
+          </tr>
+          </thead>
+          <tbody>
+          <tr *ngFor="let customer of customers">
+            <th scope="row">{{customer.id}}</th>
+            <td>{{customer.namaCustomer}}</td>
+            <td>{{customer.alamatCustomer}}</td>
+            <td>{{customer.kelaminCustomer}}</td>
+            <td>{{customer.telpCustomer}}</td>
+            
+            <td>
+              <button type="button" class="btn btn-success" (click)="editCustomerPage(customer)">Edit</button>
+              <button type="button" class="btn btn-danger" (click)="deleteCustomer(customer)">Delete</button>
+            </td>
+          </tr>
+          
+          </tbody>
+        </table>
+      </section>
+    </div>
+  </div>
+</div>

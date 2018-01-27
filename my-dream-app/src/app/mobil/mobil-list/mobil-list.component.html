@@ -1,0 +1,54 @@
+<div class="container">
+  <div class="row">
+    <div class="col">
+      <section>
+        <header class="header">
+          <div class="row">
+            <div class="col-md-4">
+              <h2>Data Mobil</h2>
+            </div>
+            <div class="col-md-6">
+
+            </div>
+            <div class="col-md-2">
+              <button type="button" class="btn btn-primary" (click)="redirectNewMobilPage()">New Mobil</button>
+            </div>
+          </div>
+
+        </header>
+      </section>
+
+      <section class="main">
+
+        <table class="table" style="font:16px arial,verdana,sans-serif; text-shadow: 1px 1px 2px khaki;">
+          <thead>
+          <tr>
+            <th>No</th>
+            <th>Merk Mobil</th>
+            <th>Nama Mobil</th>
+            <th>Jenis Mobil</th>
+            <th>Nomor Polisi</th>
+ 
+            <th></th>
+          </tr>
+          </thead>
+          <tbody>
+          <tr *ngFor="let mobil of mobils">
+            <th scope="row">{{mobil.id}}</th>
+            <td>{{mobil.merkMobil}}</td>
+            <td>{{mobil.namaMobil}}</td>
+            <td>{{mobil.jenisMobil}}</td>
+            <td>{{mobil.platsMobil}}</td>
+            
+            <td>
+              <button type="button" class="btn btn-success" (click)="editMobilPage(mobil)">Edit</button>
+              <button type="button" class="btn btn-danger" (click)="deleteMobil(mobil)">Delete</button>
+            </td>
+          </tr>
+          
+          </tbody>
+        </table>
+      </section>
+    </div>
+  </div>
+</div>

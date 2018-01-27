@@ -1,0 +1,39 @@
+
+And edit the file src/styles.css and add the following lines to the bottom:
+
+body {
+  padding-top: 5rem;
+}
+li {
+	display: block;
+}
+.starter-template {
+  	padding: 1rem 1.5rem;
+  	color: black;
+  	font: 5pt bold;
+	text-shadow: 2px 2px 4px khaki;
+  	text-align: left;
+  	padding-bottom: 30px;
+	background: white;	
+	box-shadow : 0px 2px silver;
+}
+		main{
+			display: block;
+			margin-top: 2px;
+			box-shadow: 0px 2px 5px #58595b;
+			background-color: #F5F9FA;
+			width: 17%;
+			height: 765px;
+			float: left;
+		}		
+		
+		#beranda{
+			border: 1px solid #e0e0e0;
+			border-radius: 5px;
+			margin: 25px;
+			height: 30px;
+			padding-left: 20px;
+		}
+		Aside{
+			margin-left: 17%;
+		}

@@ -1,0 +1,11 @@
+.col-md-4 {
+  	color: black;
+  	font: 5pt bold;
+	text-shadow: 2px 2px 4px khaki;
+}
+
+table {
+	background-color: #fff;	
+	border-color: #000!important;
+	border-radius: 10px;
+}
